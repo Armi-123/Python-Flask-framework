@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create</title>
+</head>
+<body>
+    <center>
+        <form action="/update1/{{id}}" enctype="multipart/form-data" method="post">
+
+            <label>First_Name:</label>
+            <input type="text" name="First_Name"><br><br>
+            <label>Last_Name:</label> 
+            <input type="text" name="Last_name"><br><br>
+            <label>Address:</label> 
+            <input type="text" name="Address"><br><br>
+            <label>Mobile:</label> 
+            <input type="text" name="Mobile"><br><br>
+            <label>Dob:</label> 
+            <input type="date" name="Dob"><br><br>
+            <label>Email:</label> 
+            <input type="email" name="Email"><br><br>
+            <label>Gender :</label>
+            <td>
+                <input type="radio" value = "male" name="Gender" >
+            </td>
+            <td>male</td>
+            <td>
+                <input type="radio" value="female" name="Gender">
+            </td>
+            <td>female</td><br><br>
+            <!-- <label>Select state:-</label>
+            <select name="state">
+                <option value="">---Select---</option>
+                <option value="Ahmedabad">Gujrat</option>
+                <option value="Rajkot">Rajsthan</option>
+                <option value="Somnath">Madhya Pradesh</option>
+            </select>
+            <br><br>
+            <label>Select City:-</label>
+            <select name="city">
+                <option value="">---Select---</option>
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="Rajkot">Rajkot</option>
+                <option value="Somnath">Somnath</option>
+                <option value="Somnath">jaipur</option>
+                <option value="Somnath">jesalmer</option>
+                <option value="Somnath">Jodhpur</option>
+                <option value="Somnath">bhopal</option>
+                <option value="Somnath">indor</option>
+                <option value="Somnath">Ujjain</option>
+            </select> -->
+            <br><br>
+            <label>Hobbies :</label>
+            <label>Playing</label><input type="checkbox" name="Hobbies" value="Playing">
+            <label>Reading</label><input type="checkbox" name="Hobbies" value="Reading">  
+            <label>Wahtcing</label><input type="checkbox" name="Hobbies" value="Wahtcing">
+            <br><br>         
+            <label>Education :</label>
+            <label>school:</label><input type="checkbox" name="Education" value="School"> 
+            <label>college:</label><input type="checkbox" name="Education" value="collage">
+            <label>Graduate :</label><input type="checkbox" name="Education" value="Graduate"><br><br>
+
+            <label>Image :</label><input type="file" name = "Image"><br><br>
+            <input type="submit" value="update">  
+        </form>
+    </center>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+  </head>
+  <body>
+      <h1>information</h1>
+      
+      <label>Image : {{upload[]}} </label><br>
+
+      <td> <img src="data:image/jpeg;base64,{{ upload['Image'] }}" alt="{{ upload['Image'] }}" height="100px"></td><br><br>
+      
+      <label>Name : {{upload['Name']}}</label><br><br>
+      
+      <label>DOB : {{upload['DOB']}}</label><br><br>
+            
+      <label>Mobile : {{upload['Mobile']}}</label><br><br>
+      
+      <label>Join_Date : {{upload['Join_Date']}}</label><br><br>
+      
+      <label>Salary : {{upload['Salary']}}</label><br><br>
+      
+      <label>Role: {{upload['Role']}}</label><br><br>
+    </body>
+</html>

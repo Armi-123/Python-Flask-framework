@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Form</title>
+    <style>
+        .container {
+            max-width: 100px;
+            margin: auto;
+        }
+
+        .table {
+            width: 200%;
+        }
+
+        .form-control {
+            width: 200%;
+        }
+
+        .btn-primary {
+            width: 100%;
+        }
+    </style>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+<div class="container mt-5">
+    <form action="/update/{{id.id}}" method="post" enctype="multipart/form-data">
+        <table class="table">
+            <tr>
+                <td><b><label for="Image" >Image:</label></td>
+                <td> <img src="data:Image/jpeg;base64,{{ id['Image'] }}" alt="{{ id['Image'] }}" height="100px"></td>
+            </tr>
+            <tr>
+                <td><b><label for="Username">Username:</label></td><br><br>
+                <td><input type="text" class="form-control"  value="{{id.Username}}" name="Username" required></td><br><br>
+            </tr>
+            <tr>
+                <td><b><label for="Email">Email:</label></td>
+                <td><input type="Email" class="form-control" value="{{id.Email}}" name="Email" required></td>
+            </tr>
+            <tr>
+                <td><b><label for="Phone">Phone:</label></td>
+                <td><input type="tel" class="form-control" value="{{id.Phone}}" name="Phone" required></td>
+            </tr>
+            <tr>
+                <td><b><label for="Address">Address:</label></td>
+                <td><input type="text" class="form-control" value="{{id.Address}}" name="Address" required></td>
+            </tr>
+            <tr>
+                <td><b><label for="City">City:</label></td>
+                <td><input type="text" class="form-control" value="{{id.City}}" name="City" required></td>
+            </tr>
+            <tr>
+                <td><b><label for="State">State:</label></td>
+                <td><input type="text" class="form-control" value="{{id.State}}" name="State" required></td>
+            </tr> 
+            <tr>
+                <td><b><label for="Task_Name">Task Name:</label></td>
+                <td><input type="text" class="form-control" value="{{id.Task_Name}}" name="Task_Name" required></td>
+            </tr>
+            <tr>
+                <td><b><label for="Status">Status:</label></td>
+                <td>
+                    <select class="form-control" name="Status" required>
+                        <option value="">---Select---</option>
+                        <option value="in_progress" {% if id.Status == "in_progress" %}selected{% endif %}>In Progress</option>
+                        <option value="completed" {% if id.Status == "completed" %}selected{% endif %}>Completed</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><b><label for="Start_Date">Start Date:</label></td>
+                <td><input class="form-control" value="{{id.Start_Date}}" name="Start_Date" required></td>
+            </tr>
+            <tr>
+                <td><b><label for="End_Date">End Date:</label></td>
+                <td><input class="form-control" value="{{id.End_Date}}" name="End_Date" required></td>
+            </tr>   
+            <tr>
+                <td><b><label for="Image" >New Image:</label></td>
+                <td><input type='file' name="Image" value="{{id.Image}}"></td>
+            </tr>
+        </table>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

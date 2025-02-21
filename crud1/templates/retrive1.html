@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrive</title>
+    <style>
+        tr{
+            height: 50px;
+        }
+        td{
+            width: 150px;
+        }
+        table{
+            text-align: center;
+            color: black;
+            background-color: rgb(210, 210, 246);
+            border-color: rgb(34, 34, 117) ;
+        }
+    </style>
+</head>
+<body>
+    <table border="5px dotted balck" align="center">
+        <tr>
+            <td>id</td>
+            <td>city_name</td>
+            <td>state_id</td>
+            <td>Edit</td>
+            <td>Delete</td>
+        </tr>
+        {% for i in store %}
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.city_name}}</td>
+                <td>{{i.state_id}}</td>
+                <td><a href="/edit/{{i.id}}">Edit</a></td>
+                <td><a href='/delete/{{i.id}}'>Delete</a></td>
+            </tr>
+        {%endfor%}
+    </table>
+</body>
+</html>

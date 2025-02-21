@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Details</title>
+  </head>
+  <body>
+    <h2>File Details</h2>
+    <table border="1">
+      <tr>
+        <th>ID</th>
+        <th>First_Name</th>
+        <th>Email</th>
+        <th>Edit</th>
+        <th>Delete</th>
+        <th>Display</th>
+      </tr>
+      {% for data in store %}
+      <tr>
+        <td>{{ data['id']}}</td>
+        <td>{{ data['First_Name']}}</td>
+        <td>{{ data['Email']}}</td>
+        <td><a href="/edit/{{data.id}}">edit</a></td>
+        <td><a href="/delete/{{data.id}}">delete</a></td>
+        <td><a href="/display1/{{data.id}}">display</a></td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

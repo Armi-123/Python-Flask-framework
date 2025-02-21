@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create</title>
+</head>
+<body>
+    <center>    
+        <form action="/update/{{id.id}}" enctype="multipart/form-data" method="post">
+
+            <label>Name :</label><input type="text" name = "Name" value="{{id.Name}}"><br><br>
+            <label>DOB :</label><input type="date" name = "DOB" value="{{id.DOB}}"><br><br>
+            <label>Mobile :</label><input type="text" name = "Mobile" value="{{id.Mobile}}"><br><br>
+            <label>Join_Date :</label><input type="date" name = "Join_Date" value="{{id.Join_Date}}"><br><br>
+
+            <label>Select Salary : </label>
+            <select name="Salary">
+                <option value="">---Select---</option>
+                <option value="3 lakh per annum" {% if id.Salary == '3 lakh per annum' %}selected{% endif %}>3 lakh per annum</option>
+                <option value="5 lakh per annum" {% if id.Salary == '5 lakh per annum' %}selected{% endif %}>5 lakh per annum</option>
+                <option value="7 lakh per annum" {% if id.Salary == '7 lakh per annum' %}selected{% endif %}>7 lakh per annum</option>
+            </select>
+            <br><br>
+            <label>Role :</label>
+            <label>Frontend_developer :</label><input type="checkbox" name="Role" value="Frontend_developer" {% if 'Frontend_developer' in id.Role %}checked{% endif %}> 
+            <label>Backend_developer :</label><input type="checkbox" name="Role" value="Backend_developer" {% if 'Backend_developer' in id.Role %}checked{% endif %}>
+            <label>Fullstake_developer :</label><input type="checkbox" name="Role" value="Fullstake_developer" {% if 'Fullstake_developer' in id.Role %}checked{% endif %}><br><br>
+
+            <label>Image :</label><input type="file" name = "Image"><br><br>
+            <input type="submit" value="update"> 
+        
+        </form>
+    </center>
+</body>
+</html>

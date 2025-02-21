@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Details</title>
+</head>
+<body>
+    <h2>File Details</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Filename</th>
+            <th>Image</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        {% for data in encoded_images %}
+            <tr>
+                <td>{{ data['id'] }}</td>
+                <td>{{ data['filename'] }}</td>
+                <td> <img src="data:image/jpeg;base64,{{ data['encoded_image'] }}" alt="{{ data['filename'] }}" height="100px"></td>
+                <td><a href="/edit/{{data.id}}" style="text-decoration: none; color: blue">edit</a></td>
+                <td><a href="/delete/{{data.id}}" style="text-decoration: none; color: blue">delete</a></td>
+            </tr>
+        {% endfor %}
+    </table> 
+    <br>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>

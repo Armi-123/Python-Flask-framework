@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="=widthdevice-width, initial-scale=1.0" />
+      <title>Document</title>
+  </head>
+  <body>
+      <h1>Information</h1>
+      
+      <label>Image : {{upload[]}} </label><br>
+      <td> <img src="data:image/jpeg;base64,{{ upload['Image'] }}" alt="{{ upload['Image'] }}" height="100px"></td><br>
+      
+      <label>user_name : {{upload['user_name']}}</label><br><br>
+
+      <label>First_Name : {{upload['First_Name']}}</label><br><br>
+      
+      <label>Last_Name : {{upload['Last_Name']}}</label><br><br>
+      
+      <label>Address : {{upload['Address']}}</label><br><br>
+      
+      <label>Mobile : {{upload['Mobile']}}</label><br><br>
+      
+      <label>Dob : {{upload['Dob']}}</label><br><br>
+      
+      <label>Email : {{upload['Email']}}</label><br><br>
+      
+      <label>Gender : {{upload['Gender']}}</label><br/><br/>
+
+      <label>State : {{upload['State']}}</label><br><br>
+      
+      <label>City : {{upload['City']}}</label><br><br>
+      
+      <label>Hobbies : {{upload['Hobbies']}}</label><br><br>
+      
+      <label>Education : {{upload['Education']}}</label><br><br>
+
+      <a href="/edit/{{upload.id}}">edit</a><br>
+      <a href="/delete/{{upload.id}}">delete</a><br>
+      <a href="/logout">logout</a><br>
+      <a href="/update_password/{{upload.id}}">change_password</a><br>
+
+    </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Form</title>
+        <style>
+            .container {
+                max-width: 500px;
+                margin: auto;
+            }
+
+            .table {
+                width: 100%;
+            }
+
+            .form-control {
+                width: 100%;
+            }
+
+            .btn-primary {
+                width: 100%;
+            }
+
+            .button {
+                background-color: #64a667; 
+                border: none;
+                color: white;
+                padding: 10px 100px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 10px;
+            }
+            
+            .button:hover {background-color: #3e8e41}
+
+            .button:active {
+                background-color: #0ec65b;
+                box-shadow: 0 5px #666;
+                transform: translateY(4px);
+            }
+            
+            .button.edit {
+                background-color: #0aafaf; 
+            }
+            
+            .button.delete {
+                background-color: #f44336; 
+            }
+
+            .button.change_PWD{
+                background-color: #f0f0f0;
+            }
+        </style>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css"> 
+         
+    </head>
+
+<body>
+    <div class="container mt-5">
+        <table class="table">
+            <tr>
+                <td><b><label for="Image">Image: {{upload[]}}</label></td>
+                <td> <img src="data:image/jpeg;base64,{{ upload['Image'] }}" alt="{{ upload['Image'] }}" height="100px"></td><br>
+            </tr>
+            <tr>
+                <td><b><label for="Username">Username: <td><b>{{upload['Username']}}</td></label></td>
+            </tr>
+            <tr>
+                <td><b><label for="Email">Email:<td><b> {{upload['Email']}}</td></label></td>
+            </tr>
+            <tr>
+                <td><b><label for="Phone">Phone: <td><b>{{upload['Phone']}}</td></label></td>
+            </tr>
+            <tr>
+                <td><b><label for="Address">Address: <td><b>{{upload['Address']}}</td></label></td>
+            </tr>
+            <tr>
+                <td><b><label for="City">City: <td><b>{{upload['City']}}</td></label></td>
+            </tr>
+            <tr>
+                <td><b><label for="State">State: <td><b>{{upload['State']}}</td></label></td>
+            </tr> 
+            <tr>
+                <td><b><label for="Task_Name">Task Name: <td><b>{{upload['Task_Name']}}</td></label></td>
+            </tr>
+            <tr>
+                <td><b><label for="Status">Status: <td><b>{{upload['Status']}}</td></label></td>
+            </tr>
+            <tr>
+                <td><b><label for="Start_Date">Start Date: <td><b><i>{{upload['Start_Date']}}</td></label></td>
+            </tr>
+            <tr>
+                <td><b><label for="End_Date">End Date: <td><b>{{upload['End_Date']}}</td></label></td>
+            </tr>
+            <tr>
+                <td><button><a button class="button edit" href="/edit/{{upload.id}}">Edit</button></td></form>
+                <td><button><a button class="button delete" href="/delete/{{upload.id}}">Delete</button></td>
+                <td><button><a button class="button Change_PWD" href="/updatepass/{{upload.id}}">Change_PWD</button></td>    
+                <td><button><a button class="button" href="/logout">Logout</button></td>
+            </tr>
+        </table>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

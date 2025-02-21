@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create</title>
+</head>
+<body>
+    <form action="/update/{{id.id}}" enctype="multipart/form-data" method="post">
+    <center>
+        <div class="container">
+            <h3>Edit Details</h3>
+            <div>
+            <label>Image : {{id[]}} </label><br>
+            <td> <img src="data:image/jpeg;base64,{{ id['Image'] }}" alt="{{ id['Image'] }}" height="100px"></td><br><br>
+        </div>
+        <div>
+            <label>user_name :</label>
+            <input type="text" name = "user_name" value="{{id.user_name}}"><br><br>
+        </div>
+        <!-- <div>
+            <label>Password :</label>
+            <input type="text" name = "Password" value="{{id.Password}}"><br><br>
+        </div> -->
+        <div>
+            <label>First_Name :</label>
+            <input type="text" name = "First_Name" value="{{id.First_Name}}"><br><br>
+        </div>
+        <div>
+            <label>Last_Name :</label>
+            <input type="text" name = "Last_Name" value="{{id.Last_Name}}"><br><br>
+        </div>
+        <div>
+            <label>Address :</label>
+            <input type="text" name = "Address" value="{{id.Address}}"><br><br>
+        </div>
+        <div>
+            <label>Mobile :</label>
+            <input type="text" name = "Mobile" value="{{id.Mobile}}"><br><br>
+        </div>
+        <div>
+            <label>Dob :</label>
+            <input type="date" name = "Dob" value="{{id.Dob}}"><br><br>
+        </div>
+        <div>
+            <label>Email :</label>
+            <input type="text" name = "Email" value="{{id.Email}}"><br><br>
+        </div>
+        <div>
+            <label>Gender :</label>
+            <td>
+                <input type="radio" value = "male"  {% if id.Gender == 'male' %}checked{% endif %} name="Gender">
+            </td>
+            <td>male</td>
+            <td>
+                <input type="radio" value="female"  {% if id.Gender == 'female' %}checked{% endif %} name="Gender">
+            </td>
+            <td>female</td><br><br>
+        </div>
+        <div>
+            <label>Hobbies :</label>
+            <label>Playing</label><input type="checkbox" name="Hobbies" value="Playing" {% if 'Playing' in id.Hobbies %}checked{% endif %}>
+            <label>Reading</label><input type="checkbox" name="Hobbies" value="Reading" {% if 'Reading' in id.Hobbies %}checked{% endif %}>  
+            <label>Watching</label><input type="checkbox" name="Hobbies" value="Watching" {% if 'Watching' in id.Hobbies %}checked{% endif %}><br><br>
+        </div>
+        <div>
+            <label>Select state:-</label>
+            <select name="State">
+                <option value="">---Select---</option>
+                <option value="Gujrat" {% if id.State == 'Gujrat' %}selected{% endif %}>Gujrat</option>
+                <option value="Rajsthan" {% if id.State == 'Rajsthan' %}selected{% endif %}>Rajsthan</option>
+                <option value="Madhya Pradesh" {% if id.State == 'Madhya Pradesh' %}selected{% endif %}>Madhya Pradesh</option>
+            </select>
+            <br><br>
+        </div>
+        <div>
+            <label>Select City:-</label><select name="City">
+                <option value="">---Select---</option>
+                <option value="Ahmedabad" {% if id.City == 'Ahmedabad' %}selected{% endif %}>Ahmedabad</option>
+                <option value="Rajkot" {% if id.City == 'Rajkot' %}selected{% endif %}>Rajkot</option>
+                <option value="Somnath" {% if id.City == 'Somnath' %}selected{% endif %}>Somnath</option>
+                <option value="jaipur" {% if id.City == 'jaipur' %}selected{% endif %}>jaipur</option>
+                <option value="jesalmer" {% if id.City == 'jesalmer' %}selected{% endif %}>jesalmer</option>
+                <option value="Jodhpur" {% if id.City == 'Jodhpur' %}selected{% endif %}>Jodhpur</option>
+                <option value="bhopal" {% if id.City == 'bhopal' %}selected{% endif %}>bhopal</option>
+                <option value="indor" {% if id.City == 'indor' %}selected{% endif %}>indor</option>
+                <option value="Ujjain" {% if id.City == 'Ujjain' %}selected{% endif %}>Ujjain</option>
+            </select>
+            <br><br>
+        </div>
+        <div>
+            <label>Education :</label>
+            <label>Bsc It :</label><input type="checkbox" name="Education" value="Bsc IT" {% if 'Bsc IT' in id.Education %}checked{% endif %}> 
+            <label>Bca :</label><input type="checkbox" name="Education" value="Bca" {% if 'Bca' in id.Education %}checked{% endif %}>
+            <label>Mca :</label><input type="checkbox" name="Education" value="Mca" {% if 'Mca' in id.Education %}checked{% endif %}><br><br>
+        </div>
+        <div>
+            <label>Image :</label><input type="file" name = "Image"><br><br>
+        </div>
+        <button type="submit" value="submit">Update</button>        
+        </form>
+    </div>
+     </center> 
+</body>
+</html>

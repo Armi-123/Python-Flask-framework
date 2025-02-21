@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Details</title>
+</head>
+<body>
+    <h2>File Details</h2>
+    <table border="1">
+        <tr>
+        
+            <td><b>id</td>
+            <td><b>Username</td>
+            <td><b>Email</td>   
+            <td><b>Phone</td>    
+            <td><b>Task_Name</td> 
+            <td><b>Status</td> 
+            <td><b>Start_Date</td> 
+            <td><b>End_Date</td> 
+            <td><b>Delete</td>
+        </tr>
+
+        {% for data in store %}
+            <tr>
+                <td>{{ data['id'] }}</td>
+                <td>{{ data['Username'] }}</td>
+                <td>{{ data['Email'] }}</td>
+                <td>{{data['Phone']}}</td>
+                <td>{{data['Task_Name']}}</td>
+                <td>{{data['Status']}}</td>
+                <td>{{data['Start_Date']}}</td>
+                <td>{{data['End_Date']}}</td>
+                <td><a href='/delete1/{{data.id}}'>delete</a></td>
+
+
+
+            </tr>
+        {%endfor%}
+    </table> 
+</body>
+</html>

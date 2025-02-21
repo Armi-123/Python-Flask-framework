@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create</title>
+    <style>
+      form {
+        width: 500px;
+        height: auto;
+      }
+      label {
+        text-align: start;
+        display: block;
+        font-size: 20px;
+      }
+      input {
+        margin: 10px 0;
+        width: 100%;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/store" method="POST">
+      <div>
+        <label for=""> Subject </label>
+        <input type="text" name="subject" />
+      </div>
+      <div>
+        <label for=""> Description </label>
+        <input type="text" name="description" />
+      </div>
+      <div>
+        <label for=""> Date </label>
+        <input type="date" name="date" />
+      </div>
+      <div>
+        <label for=""> Status </label>
+        <input type="text" name="status" />
+      </div>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

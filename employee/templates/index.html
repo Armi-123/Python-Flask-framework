@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Form</title>
+  </head>
+  <body>
+    <form action="/store" method="post" enctype="multipart/form-data">
+        <h1>Employee Form</h1>
+        <div>
+          <label>Name :</label>
+          <input type="text" name="Name" placeholder="Enter Your Name" />
+        </div>
+        <br />
+        <div>
+          <label>DOB :</label>
+          <input type="date" name="DOB" />
+        </div>
+        <br />
+        <div>
+          <label>Mobile :</label>
+          <input type="text" name="Mobile" placeholder="Enter your Mobile" />
+        </div>
+        <br />
+        <div>
+          <label>Join_Date :</label>
+          <input type="date" name="Join_Date" />
+        </div>
+        <br />
+        <div>
+          <label>Your salary:-</label
+          ><select name="Salary">
+            <option value="">---Select---</option>
+            <option value="3 lakh per annum">3 lakh per annum</option>
+            <option value="5 lakh per annum">5 lakh per annum</option>
+            <option value="7 lakh per annum">7 lakh per annum</option>
+          </select>
+        </div>
+        <br />
+        <div>
+          <label>Role :</label>
+          <label>Frontend_developer</label
+          ><input
+            type="checkbox"
+            name="Role"
+            value="Frontend_developer"
+          />
+          <label>Backend_developer</label
+          ><input type="checkbox" name="Role" value="Backend_developer" />
+          <label>Fullstake_developer</label
+          ><input
+            type="checkbox"
+            name="Role"
+            value="Fullstake_developer"
+          />
+        </div>
+        <br />
+        <div><label>Image :</label><input type="file" name="Image" /></div>
+        <br />
+        <div>
+          <input type="submit" value="Submit" />
+        </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registraction Form</title>
+    <style>
+      .container {
+        width: 350px;
+        border-radius:1cm;
+        box-shadow: 1cap black;
+        height: 650px;
+        border: 2.5px solid black;
+        text-align: left;
+        padding-left: 75px;
+        background-color: rgb(197, 202, 233);
+      }
+      button{
+        padding:4px 10px;
+        margin-left:105px;
+        color: white;
+        border: none;
+        background-color: rgb(51, 51, 146);
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/store" method="post" enctype="multipart/form-data">
+      <center>
+        <div class="container">
+          <h1>Registraction Form</h1>
+          <div class="a1">
+            <label>user_name :</label>
+            <input type="text" name="user_name" style="margin-left:15px;"/><br /><br />
+          </div>
+          <div class="a1">
+            <label>Password :</label>
+            <input type="text" name="Password" style="margin-left:25px;"/><br /><br />
+          </div>
+          <div>
+            <label>First_Name :</label>
+            <input type="text" name="First_Name" style="margin-left:10px;"/><br /><br />
+          </div>
+          <div>
+            <label>Last_Name :</label>
+            <input type="text" name="Last_Name" style="margin-left:10px;"/><br /><br />
+          </div>
+          <div>
+            <label>Address :</label>
+            <input type="text" name="Address" style="margin-left:30px;"/><br /><br />
+          </div>
+          <div>
+            <label>Mobile :</label>
+            <input type="text" name="Mobile" style="margin-left:35px;"/><br /><br />
+          </div>
+          <div>
+            <label>Dob :</label>
+            <input type="date" name="Dob" style="margin-left:50px;"/><br /><br />
+          </div>
+          <div>
+            <label>Email :</label>
+            <input type="text" name="Email" style="margin-left:40px;"/><br /><br />
+          </div>
+          <div>
+            <label>Gender :</label>
+            <td>
+              <input type="radio" value="male" name="Gender" />
+            </td>
+            <td>male</td>
+            <td>
+              <input type="radio" value="female" name="Gender" />
+            </td>
+            <td>female</td>
+            <br /><br />
+          </div>
+          <div>
+            <label>Hobbies :</label>
+            <label style="margin-left:10px;">Playing</label
+            ><input type="checkbox" name="Hobbies" value="Playing" />
+            <label>Reading</label
+            ><input type="checkbox" name="Hobbies" value="Reading" />
+            <label>Watching</label
+            ><input
+              type="checkbox"
+              name="Hobbies"
+              value="Watching"
+            /><br /><br />
+          </div>
+          <div>
+            <label style="margin-right:20px;">Select state:-</label
+            ><select name="State">
+              <option value="">---Select---</option>
+              <option value="Gujrat">Gujrat</option>
+              <option value="Rajsthan">Rajsthan</option>
+              <option value="Madhya Pradesh">Madhya Pradesh</option>
+            </select>
+            <br /><br />
+          </div>
+          <div>
+            <label style="margin-right:20px;">Select City:-</label
+            ><select name="City">
+              <option value="">---Select---</option>
+              <option value="Ahmedabad">Ahmedabad</option>
+              <option value="Rajkot">Rajkot</option>
+              <option value="Somnath">Somnath</option>
+              <option value="jaipur">jaipur</option>
+              <option value="jesalmer">jesalmer</option>
+              <option value="Jodhpur">Jodhpur</option>
+              <option value="bhopal">bhopal</option>
+              <option value="indor">indor</option>
+              <option value="Ujjain">Ujjain</option>
+            </select>
+            <br /><br />
+          </div>
+          <div>
+            <label style="margin-right:20px;">Education :</label>
+            <label>Bsc It </label
+            ><input type="checkbox" name="Education" value="Bsc IT" />
+            <label>Bca </label
+            ><input type="checkbox" name="Education" value="Bca" />
+            <label>Mca </label
+            ><input type="checkbox" name="Education" value="Mca" /><br /><br />
+          </div>
+          <div>
+            <label style="margin-right:30px;">Image :</label><input type="file" name="Image" /><br /><br />
+          </div>
+          <button type="submit" value="Submit">Submit</button>
+        </div>
+      </center>
+    </form>
+  </body>
+</html>

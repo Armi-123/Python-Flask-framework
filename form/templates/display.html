@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Details</title>
+</head>
+<body>
+    <h2>File Details</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>First_Name</th>
+            <th>Last_Name</th>
+            <th>Address</th>
+            <th>Mobile</th>
+            <th>Dob</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>state</th>
+            <th>city</th>
+            <th>Hobbies</th>
+            <th>Education</th>
+            <th>Image</th>
+            <th>edit</th>
+            <th>delete</th>
+        </tr>
+        {% for data in encoded_images %}
+            <tr>
+                <td>{{ data['id'] }}</td>
+                <td>{{ data['First_Name'] }}</td>
+                <td>{{ data['Last_Name'] }}</td>
+                <td>{{ data['Address'] }}</td>
+                <td>{{ data['Mobile'] }}</td>
+                <td>{{ data['Dob'] }}</td>
+                <td>{{ data['Email'] }}</td>
+                <td>{{ data['Gender'] }}</td>
+                <td>{{ data['state']}}</td>
+                <td>{{ data['city'] }}</td>
+                <td>{{ data['Hobbies'] }}</td>
+                <td>{{ data['Education'] }}</td>
+                <td> <img src="data:image/jpeg;base64,{{ data['encoded_image'] }}" alt="{{ data['filename'] }}" height="100px"></td>
+                <td><a href="/edit/{{data.id}}">edit</a></td>
+                <td><a href='/delete/{{data.id}}'>delete</a></td>
+            </tr>
+        {% endfor %}
+    </table> 
+    <br>
+    <a href="{{ url_for('form') }}">Back to Home</a>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retrive</title>
+    <style>
+      tr {
+        height: 80px;
+      }
+      td {
+        width: 150px;
+        text-decoration: none;
+      }
+      table {
+        text-align: center;
+        color: black;
+        background-color: #a2b9f9;
+        border-color:darkblue;
+        border-style:dashed;
+        font-size:larger;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <table border="2px solid black" align="center">
+      <tr style="font-size:x-large; color: red;">
+        <td>Task_id</td>
+        <td>Subject</td>
+        <td>Description</td>
+        <td>Date</td>
+        <td>Status</td>
+        <td colspan="2">Update</td>
+      </tr>
+      {% for i in store %}
+      <tr>
+        <td>{{i.task_id}}</td>
+        <td>{{i.subject}}</td>
+        <td>{{i.description}}</td>
+        <td>{{i.date}}</td>
+        <td>{{i.status}}</td>
+        <td><a href="/edit2/{{i.task_id}}" style="text-decoration: none; color: blue">edit</a></td>
+        <td><a href="/delete/{{i.task_id}}" style="text-decoration: none; color: blue">delete</a></td>
+      </tr>
+      {%endfor%}
+    </table>
+  </body>
+</html>
